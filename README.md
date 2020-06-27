@@ -24,3 +24,20 @@ If you run this script periodically, you can track the user growth. The script w
 -------------------
 
 A message to engineers working for GSX: it is not worth it, and you know it.
+
+-------------------
+
+Use matplotlib to draw images, steps to resolve chinese display gibberish.
+1. download microsoft SimHei font file, or directly use project directory "SimHei.ttf".
+
+2. copy "SimHei.ttf" file to your matplotlib font directory.
+for my ubuntu, the location is "/home/ubuntu/.local/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/".
+
+3. modify configuration file matplotlibrc
+for my ubuntu, the location is "/home/ubuntu/.local/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc".
+add the following text:
+font.family         : sans-serif
+font.sans-serif     : SimHei
+axes.unicode_minus  : False
+
+4. restart/reload python
